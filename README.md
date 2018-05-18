@@ -20,10 +20,6 @@ Setup for developers (Unix)
    environment variables.
 1. Make sure you have python3-dev installed on your operating system. For Debian, you would additionally require libpq-dev.
    Install by using `sudo apt-get install libpq-dev python3-dev`
-1. Make sure you have PostgreSQL installed. For a tutorial on installing
-   Postgres, [Django Girls'](http://djangogirls.org) ebook,
-   [Tutorials Extension](http://djangogirls.org/resources/), is a reference.
-   The info is also on [Django Girls GitHub repository](https://github.com/DjangoGirls/tutorial-extensions/blob/master/en/optional_postgresql_installation/README.md).
 1. Clone the repo - `git clone git@github.com:systers/portal.git` and cd into
   the `portal` directory. If working behind a proxy, follow the instructions [here](https://cms-sw.github.io/tutorial-proxy.html).
 1. Create a virtual environment with Python 3 and install dependencies:
@@ -33,16 +29,7 @@ Setup for developers (Unix)
      $ source venv/bin/activate
      $ pip install -r requirements/dev.txt
      ```
-1. Create `systersdb` database, where `systersdb` might be any suitable name.
-    ```
-    $ sudo -i -u postgres
-    $ createuser <any name e.g. alice> --pwprompt
-    $ psql
-    $ CREATE DATABASE systersdb;
-    $ \c systersdb;
-    $ GRANT ALL PRIVILEGES ON DATABASE systersdb to <the name>;
-    ```
-1. Fill in the database details in `systers_portal/settings/dev.py`.
+1. Create the database. Instruction can be found at `PSQL_README.md`.
 1. Run `export SECRET_KEY=foobarbaz` in your terminal, ideally the secret key
   should be 40 characters long, unique and unpredictable. Optionally to set the
   shell variable every time you activate the virtualenv, edit `venv/bin/activate`
@@ -75,7 +62,6 @@ Setup for developers (Windows)
 - Precomplie standard libary
 - Select install location and hit install
 1. Run `pip install virtualenv` using windows command line
-1. You would have to install PostgreSQL. Download from [official location](https://www.postgresql.org/download/windows/) or alternative location, you could lookup some PostgreSQL tutorials online if you are completely blank on this. 
 1. Clone the repo - `git clone git@github.com:systers/portal.git` and cd into the `portal` directory. Use git CMD or git Bash(unix-like terminal) to do so.
 1. Create a virtual environment with Python 3 and install dependencies, using CMD :
  
@@ -84,21 +70,7 @@ Setup for developers (Windows)
      $ ./venv/Scripts/activate
      $ pip install -r requirements/dev.txt 
      ```
-1. Create `systersdb` database, where `systersdb` might be any suitable name.
-- Open the SQL Shell for postgresql from the windows start menu or wherever accessible
-
-    ```
-    $ Server [localhost]:  Just press enter, leave this empty
-    $ Database [postgres]: Just press enter, leave this empty
-    $ Port [5432]: This is the default port just press enter, leave this empty
-    $ Username [postgres]: This is the default username just press enter, leave this empty
-    $ Password for user postgres: Input password you created during installation and press enter
-    $ CREATE USER <anyname you want e.g systers> WITH PASSWORD 'your password';
-    $ CREATE DATABASE systersdb;
-    $ \c systersdb;
-    $ GRANT ALL PRIVILEGES ON systersdb TO <username created above>;
-    ```
-1. Fill in the database details in `systers_portal/settings/dev.py`.
+1. Create the database. Instruction can be found at `PSQL_README.md`.
 1. Run `set SECRET_KEY=foobarbaz` in your terminal, ideally the secret key
   should be 40 characters long, unique and unpredictable. 
 1. Run `python systers_portal/manage.py migrate`.
