@@ -31,7 +31,7 @@ Fill in the database details in `systers_portal/settings/dev.py`.
 Create `systersdb` database, where `systersdb` might be any suitable name.
 Open the SQL Shell for postgresql from the windows start menu or wherever accessible
 
-```bash
+```
 Server [localhost]:  Just press enter, leave this empty
 Database [postgres]: Just press enter, leave this empty
 Port [5432]: This is the default port just press enter, leave this empty
