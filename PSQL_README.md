@@ -2,7 +2,7 @@
 ## linux
 
 open the terminal and type in
-    ```
+    ```bash
     sudo apt-get update 
     sudo apt-get install postgresql postgresql-contrib
     ```
