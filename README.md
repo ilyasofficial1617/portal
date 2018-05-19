@@ -20,10 +20,6 @@ Setup for developers (Unix)
    environment variables.
 1. Make sure you have python3-dev installed on your operating system. For Debian, you would additionally require libpq-dev.
    Install by using `sudo apt-get install libpq-dev python3-dev`
-1. Make sure you have PostgreSQL installed. For a tutorial on installing
-   Postgres, [Django Girls'](http://djangogirls.org) ebook,
-   [Tutorials Extension](http://djangogirls.org/resources/), is a reference.
-   The info is also on [Django Girls GitHub repository](https://github.com/DjangoGirls/tutorial-extensions/blob/master/en/optional_postgresql_installation/README.md).
 1. Clone the repo - `git clone git@github.com:systers/portal.git` and cd into
   the `portal` directory. If working behind a proxy, follow the instructions [here](https://cms-sw.github.io/tutorial-proxy.html).
 1. Create a virtual environment with Python 3 and install dependencies:
@@ -66,7 +62,6 @@ Setup for developers (Windows)
 - Precomplie standard libary
 - Select install location and hit install
 1. Run `pip install virtualenv` using windows command line
-1. You would have to install PostgreSQL. Download from [official location](https://www.postgresql.org/download/windows/) or alternative location, you could lookup some PostgreSQL tutorials online if you are completely blank on this. 
 1. Clone the repo - `git clone git@github.com:systers/portal.git` and cd into the `portal` directory. Use git CMD or git Bash(unix-like terminal) to do so.
 1. Create a virtual environment with Python 3 and install dependencies, using CMD :
  

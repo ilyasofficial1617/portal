@@ -44,3 +44,10 @@ GRANT ALL PRIVILEGES ON systersdb TO <username created above>;
 ```
 
 Fill in the database details in `systers_portal/settings/dev.py`.
+
+
+Reference
+[Django Girls'](http://djangogirls.org) ebook,
+[Tutorials Extension](http://djangogirls.org/resources/), is a reference.
+The info is also on [Django Girls GitHub repository](https://github.com/DjangoGirls/tutorial-extensions/blob/master/en/optional_postgresql_installation/README.md).
+
