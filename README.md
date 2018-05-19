@@ -33,16 +33,7 @@ Setup for developers (Unix)
      $ source venv/bin/activate
      $ pip install -r requirements/dev.txt
      ```
-1. Create `systersdb` database, where `systersdb` might be any suitable name.
-    ```
-    $ sudo -i -u postgres
-    $ createuser <any name e.g. alice> --pwprompt
-    $ psql
-    $ CREATE DATABASE systersdb;
-    $ \c systersdb;
-    $ GRANT ALL PRIVILEGES ON DATABASE systersdb to <the name>;
-    ```
-1. Fill in the database details in `systers_portal/settings/dev.py`.
+1. Create the database. Instruction can be found at `PSQL_README.md`.
 1. Run `export SECRET_KEY=foobarbaz` in your terminal, ideally the secret key
   should be 40 characters long, unique and unpredictable. Optionally to set the
   shell variable every time you activate the virtualenv, edit `venv/bin/activate`
@@ -84,21 +75,7 @@ Setup for developers (Windows)
      $ ./venv/Scripts/activate
      $ pip install -r requirements/dev.txt 
      ```
-1. Create `systersdb` database, where `systersdb` might be any suitable name.
-- Open the SQL Shell for postgresql from the windows start menu or wherever accessible
-
-    ```
-    $ Server [localhost]:  Just press enter, leave this empty
-    $ Database [postgres]: Just press enter, leave this empty
-    $ Port [5432]: This is the default port just press enter, leave this empty
-    $ Username [postgres]: This is the default username just press enter, leave this empty
-    $ Password for user postgres: Input password you created during installation and press enter
-    $ CREATE USER <anyname you want e.g systers> WITH PASSWORD 'your password';
-    $ CREATE DATABASE systersdb;
-    $ \c systersdb;
-    $ GRANT ALL PRIVILEGES ON systersdb TO <username created above>;
-    ```
-1. Fill in the database details in `systers_portal/settings/dev.py`.
+1. Create the database. Instruction can be found at `PSQL_README.md`.
 1. Run `set SECRET_KEY=foobarbaz` in your terminal, ideally the secret key
   should be 40 characters long, unique and unpredictable. 
 1. Run `python systers_portal/manage.py migrate`.
