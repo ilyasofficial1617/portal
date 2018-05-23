@@ -1,5 +1,5 @@
 # How to Install PSQL
-## linux
+## Debian / Ubuntu
 
 open the terminal and type in
 ```bash
@@ -13,16 +13,16 @@ Download the installer from
 and follow the installation process, if asked fill `5432` in port configuration
 
 # How to Configure the Database
-## linux
+## Debian / Ubuntu
 Create `systersdb` database, where `systersdb` might be any suitable name.
 
 ```bash
 sudo -i -u postgres
-createuser <anyname e.g. alice> --pwprompt
+createuser systersdb --pwprompt
 psql
 CREATE DATABASE systersdb;
 \c systersdb;
-GRANT ALL PRIVILEGES ON DATABASE systersdb to <the name>;
+GRANT ALL PRIVILEGES ON DATABASE systersdb to systerdb;
 ```
 
 Fill in the database details in `systers_portal/settings/dev.py`.
