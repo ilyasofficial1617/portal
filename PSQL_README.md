@@ -14,15 +14,13 @@ and follow the installation process, if asked fill `5432` in port configuration
 
 # How to Configure the Database
 ## Debian / Ubuntu
-Create `systersdb` database, where `systersdb` might be any suitable name.
+
+Create the `systersdb` database.
 
 ```bash
-sudo -i -u postgres
-createuser systersdb --pwprompt
-psql
 CREATE DATABASE systersdb;
-\c systersdb;
-GRANT ALL PRIVILEGES ON DATABASE systersdb to systerdb;
+CREATE USER systersdbadmin IDENTIFIED BY ENCRYPTED PASSWORD 'yourpass';
+GRANT ALL PRIVILEGES ON DATABASE systersdb to systersdbadmin;
 ```
 
 Fill in the database details in `systers_portal/settings/dev.py`.
